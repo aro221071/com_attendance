@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_attendance</name>
+    <creationDate>2015-05-03</creationDate>
+    <copyright>Copyright (C) 2015. Alle Rechte vorbehalten.</copyright>
+    <license>GNU General Public License Version 2 oder später; siehe LICENSE.txt</license>
+    <author>Artelsmair Roman</author>
+    <authorEmail>aroaro@gmx.at</authorEmail>
+    <authorUrl>http://artelsmair.at</authorUrl>
+    <version>2.0.0</version>
+    <description></description>
+    
+    <scriptfile>script.php</scriptfile>
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>attendance.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+        <folder>assets</folder>
+    </files>
+
+    <languages folder="languages/site">
+	<language tag="en-GB">en-GB/en-GB.com_attendance.ini</language>
+        <language tag="de-DE">de-DE/de-DE.com_attendance.ini</language>
+    </languages>
+
+    <administration>
+        <menu img="components/com_attendance/assets/images/s_com_attendance.png" >COM_ATTENDANCE</menu>
+        <submenu>
+            <menu link="option=com_attendance&amp;view=teilnahmen" view="teilnahmen" img="components/com_attendance/assets/images/s_teilnahmen.png" alt="Attendance/Teilnahmen">COM_ATTENDANCE_TITLE_TEILNAHMEN</menu>
+            <menu link="option=com_attendance&amp;view=types" view="types" img="components/com_attendance/assets/images/s_types.png" alt="Attendance/Types">COM_ATTENDANCE_TITLE_TYPES</menu>
+            <menu link="option=com_attendance&amp;view=attendances" view="attendances" img="components/com_attendance/assets/images/s_attendances.png" alt="Attendance/Attendances">COM_ATTENDANCE_TITLE_ATTENDANCES</menu>
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>attendance.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="languages/administrator">
+	    <language tag="en-GB">en-GB/en-GB.com_attendance.ini</language>
+            <language tag="en-GB">en-GB/en-GB.com_attendance.sys.ini</language>
+            <language tag="de-DE">de-DE/de-DE.com_attendance.ini</language>
+            <language tag="de-DE">de-DE/de-DE.com_attendance.sys.ini</language>
+        </languages>
+    </administration>
+
+    <plugins>
+        <plugin group="search" plugin="attendance"/>
+    </plugins>
+
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.component-creator.com/ -->

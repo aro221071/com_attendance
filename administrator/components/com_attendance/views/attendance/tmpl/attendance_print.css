@@ -1,0 +1,94 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* .class #ids */
+
+*
+{
+  font-family:Calibri;
+}
+
+.pagebreakprint
+{
+	page-break-before: always;
+}
+
+/* --------------------------------------------------------------
+--- Tabelle
+---------------------------------------------------------------*/
+.atttable
+{
+  font-size: 14px;
+  border:1;
+}
+
+table th td
+{
+  font-weight:bold;
+  text-align:center;
+  background: #00FF00;
+}
+
+table tr td 
+{ 
+  background: #FFFFFF; 
+}
+
+table tr:nth-child(odd) td 
+{ 
+  background: #F5F5F5; 
+}
+
+.colDistance
+{
+  text-align:right;
+}
+
+.tdfee
+{
+  text-align:center;
+}
+
+.tddistance
+{
+  text-align:right;
+}
+
+.tdfee
+{
+  text-align:right;
+}
+
+.tdfare
+{
+  text-align:right;
+}
+
+.tdplace
+{
+  text-align:center;
+}
+
+.tdteams
+{
+  text-align:center;
+}
+
+.tdteam
+{
+  text-align:left;
+}
+
+.atttrhead
+{  
+  background: #FFFFFF;
+  color: #000000;
+  font-weight:bold;
+  text-align:center;
+} 
+
+.attrfoot
+{  
+  font-weight:bold;
+  background: #FF0000;
+}
